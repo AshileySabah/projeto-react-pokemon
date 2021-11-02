@@ -1,16 +1,16 @@
 import React from 'react';
 import './style.css';
 
-function Card() {
+function Card(props) {
   return (
     <div className="caixa-card">
         <div className="caixa-imagem">
-          <img src="https://cdn.traction.one/pokedex/pokemon/1.png" alt="Card de Pokemon" class="img-caixa-card"/>
+          {props.imagem}
         </div>
         <div className="caixa-especificacoes">
-          <p>Nome: </p>
-          <p>Tipo: </p>
-          <p>Peso: </p>
+          <p>Nome: {props.nome}</p>
+          <p>Tipo: {props.tipo}</p>
+          <p>Peso: {props.peso}</p>
         </div>
     </div>
   );

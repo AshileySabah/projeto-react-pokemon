@@ -6,11 +6,28 @@ import Footer from './componentes/Footer/index.js';
 import Card from './componentes/Card/index.js';
 
 function App() {
+
+  const numeroAleatorio = (min, max) => {
+    const numero = Math.floor(Math.random() * (max - min) + min);
+    return numero;
+  }
+
+  const montarImagemCard = () => {
+    const numeroPokemon = numeroAleatorio(1, 20);
+    const imagem = <img src={`https://cdn.traction.one/pokedex/pokemon/${numeroPokemon}.png`} alt="Imagem de Pokemon" className="img-caixa-card"/>
+    return imagem;
+  }
+
   return (
     <div className="App">
-      <Header></Header>
-      <Card></Card>
-      <Footer></Footer>
+      <Header/>
+      <Card
+        imagem={montarImagemCard()}
+        nome="Bulba"
+        tipo="agua"
+        peso="200"
+      />
+      <Footer/>
     </div>
   );
 }
