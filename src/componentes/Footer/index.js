@@ -2,9 +2,11 @@ import React from 'react';
 import './style.css';
 
 function Footer() {
+  const anoAtual = new Date().getFullYear();
+
   return (
     <footer>
-        <p>ThePokeWorld &copy; 2021</p>
+        <p>ThePokeWorld &copy; {anoAtual}</p>
         <p>Desenvolvido por Ashiley</p>
     </footer>
   );
