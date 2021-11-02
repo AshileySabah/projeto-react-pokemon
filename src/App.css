@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body{
+    background: rgb(85,249,225);
+    background: linear-gradient(315deg, rgba(85,249,225,1) 0%, rgba(213,250,238,1) 45%, rgba(135,242,148,1) 85%);
+}
+
 .App{
     display: flex;
     flex-direction: column;

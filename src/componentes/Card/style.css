@@ -27,6 +27,11 @@
 .caixa-especificacoes{
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
+    height: 112.8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .caixa-especificacoes p{
@@ -37,4 +42,25 @@
 
 .caixa-especificacoes p:last-child{
     margin-bottom: 0;
+}
+
+@media(max-width: 900px){
+    .img-caixa-card{
+        width: 90px;
+    }
+
+    .caixa-card{
+        width: 150px;
+        height: auto;
+    }
+}
+
+@media(max-width: 600px){
+    .caixa-especificacoes{
+        display: none;
+    }
+
+    .caixa-card{
+        margin: 0;
+    }
 }

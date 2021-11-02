@@ -9,3 +9,17 @@
     cursor: pointer;
     margin: 30px 0;
 }
+
+@media(max-width: 900px){
+    .botao-vai{
+        border-radius: 10px;
+        width: 200px;
+        height: 70px;
+    }
+}
+
+@media(max-width: 600px){
+    .botao-vai{
+        width: 150px;
+    }
+}
