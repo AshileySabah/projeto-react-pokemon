@@ -8,6 +8,13 @@
     box-shadow: 5px 7px 7px 5px rgba(0,0,0,0.83);
     cursor: pointer;
     margin: 30px 0;
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-vai:hover{
+    background-color: #05760D;
 }
 
 @media(max-width: 900px){

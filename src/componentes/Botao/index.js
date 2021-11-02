@@ -8,7 +8,7 @@ function Botao() {
 
   return (
     <button className="botao-vai" onClick={botaoJogar} data-button-jogar>
-      Vai
+      VAI
     </button>
   );
 }
