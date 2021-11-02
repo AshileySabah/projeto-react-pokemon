@@ -2,18 +2,9 @@ import React from 'react';
 import './style.css';
 
 import Card from '../Card/index.js';
+import Botao from '../Botao/index.js';
 
 function SecaoJogo() {
-  function botaoJogar(){
-    const areaCards = document.querySelector('[data-area-cards]');
-    const btnJogar = document.querySelector('[data-button-jogar]');
-    btnJogar.textContent = 'Vai';
-    
-    if(areaCards.classList.contains('esconder')){
-      areaCards.classList.remove('esconder');
-    }
-  }
-
   const requisicao = (url) => {
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", url, false);
@@ -29,7 +20,7 @@ function SecaoJogo() {
   }
 
   const propriedadesCard = () => {
-    const numeroPokemon = numeroAleatorio(1, 10);
+    const numeroPokemon = numeroAleatorio(1, 4);
 
     const imagem = <img src={`https://cdn.traction.one/pokedex/pokemon/${numeroPokemon}.png`} alt="Imagem de Pokemon" className="img-caixa-card"/>
     
@@ -46,14 +37,24 @@ function SecaoJogo() {
     return propriedades;
   }
 
-  const card1 = propriedadesCard();
-  const card2 = propriedadesCard();
-  const card3 = propriedadesCard();
+  var card1 = propriedadesCard();
+  var card2 = propriedadesCard();
+  var card3 = propriedadesCard();
+
+  console.log(card1.nome);
+  console.log(card2.nome);
+  console.log(card3.nome);
+
+  var statusTitulo = '';
+
+  if(card1.nome === card2.nome && card1.nome === card3.nome){
+    statusTitulo = 'Todos iguais!';
+  }
 
   return (
     <section className="secao-jogar">
-      <h2 className="titulo-secundario">Boa sorte!</h2>
-      <div className="area-cards esconder" data-area-cards>
+      <h2 className="titulo-secundario">{statusTitulo}</h2>
+      <div className="area-cards" data-area-cards>
         <Card
           imagem={card1.imagem}
           nome={card1.nome}
@@ -73,9 +74,7 @@ function SecaoJogo() {
           peso={card3.peso}
         />
       </div>
-      <button className="botao-vai" onClick={botaoJogar} data-button-jogar>
-        Começar
-      </button>
+      <Botao/>
     </section>
   );
 }
