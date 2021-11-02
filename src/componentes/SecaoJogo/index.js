@@ -18,7 +18,7 @@ function SecaoJogo() {
 
   return (
     <section className="secao-jogar">
-      <div className="area-cards">
+      <div className="area-cards esconder" data-area-cards>
         <Card
           imagem={montarImagemCard()}
           nome="Bulba"
