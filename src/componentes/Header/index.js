@@ -4,7 +4,7 @@ import './style.css';
 function Header() {
   return (
     <header className="navegacao-principal">
-        <img className="img-logo" src="/img/pokebola.png"/> 
+        <img className="img-logo" src="/img/pokebola.png" alt="Logo Pokemon"/> 
         <h1 className="titulo-principal">ThePokeWorld</h1>
     </header>
   );
