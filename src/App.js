@@ -4,6 +4,7 @@ import './App.css';
 import Header from './componentes/Header/index.js';
 import Footer from './componentes/Footer/index.js';
 import Card from './componentes/Card/index.js';
+import Botao from './componentes/Botao/index.js';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         tipo="agua"
         peso="200"
       />
+      <Botao/>
       <Footer/>
     </div>
   );

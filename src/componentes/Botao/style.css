@@ -1,0 +1,10 @@
+.botao-vai{
+    background-color: rgb(7, 136, 7);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 8px solid rgb(11, 156, 11);
+    outline: 3px solid rgb(14, 179, 14);
+    box-shadow: 5px 7px 7px 5px rgba(0,0,0,0.83);
+    cursor: pointer;
+}
